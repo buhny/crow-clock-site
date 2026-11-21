@@ -1,0 +1,78 @@
+/* Crow Clock palette, from the app's src/theme.ts */
+:root {
+  --page: #E6E6E5;
+  --card: #F7F7F6;
+  --card-edge: #CDB474;
+  --text: #1C1A17;
+  --muted: #4A463F;
+  --brass-text: #7A5A00;
+  --accent: #0F6B66;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --page: #141312;
+    --card: #211F1C;
+    --card-edge: #5C4B22;
+    --text: #F5EFE2;
+    --muted: #C9C1B2;
+    --brass-text: #D4A72C;
+    --accent: #4DBF94;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--text);
+  font: 17px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+main {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 2.5rem 16px 3rem;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-bottom: 1.75rem;
+}
+
+header img { width: 64px; height: auto; }
+
+h1, h2 {
+  font-family: "Bricolage Grotesque", -apple-system, sans-serif;
+  line-height: 1.2;
+}
+
+h1 { font-size: 2rem; margin: 0; color: var(--brass-text); }
+
+h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--card-edge);
+  border-radius: 16px;
+  padding: 1rem 1.25rem;
+}
+
+.card p:first-child { margin-top: 0; }
+.card p:last-child { margin-bottom: 0; }
+
+a { color: var(--accent); }
+
+.back {
+  display: inline-block;
+  margin-bottom: 1.25rem;
+  padding: 0.5rem 0;
+  text-decoration: none;
+}
+
+.updated, footer { color: var(--muted); font-size: 0.9rem; }
+
+footer { margin-top: 3rem; }
